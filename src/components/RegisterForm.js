@@ -1,86 +1,80 @@
 import React from "react";
 
 export default function RegisterForm() {
-    return (
-        <div class="container col-xl-10 col-xxl-8 px-4 py-5">
 
-            <div class="py-5 text-center">
-                <img class="d-block mx-auto mb-4" src="	https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"/>
+    return (
+        <div className="container col-xl-10 col-xxl-8 px-4 py-5">
+
+            <div className="py-5 text-center">
+                <img className="d-block mx-auto mb-4" src="	https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"/>
                 <h2>Register form</h2>
-                <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+                <p className="lead">Below is an example form built entirely with Bootstrap’s form.</p>
             </div>
 
 
 
-            <form class="needs-validation p-4 p-md-5 border border-primary rounded-3 bg-white" novalidate="">
-                <div class="row g-3">
-                    <div class="col-sm-6">
-                        <label for="firstName" class="form-label">First name</label>
-                        <input type="text" class="form-control border-primary" id="firstName" placeholder="" value="" required=""/>
-                        <div class="invalid-feedback">
-                            Valid first name is required.
-                        </div>
+            <form className="needs-validation col-md-6 m-auto p-4 p-md-5 border border-primary rounded-3 bg-white">
+
+                <div className="row g-3">
+
+                    <div className="col-sm-6">
+                        <label for="firstName" className="form-label">First name</label>
+                        <input type="text" className="form-control border-primary" id="firstName" placeholder="First name"/>
                     </div>
 
-                    <div class="col-sm-6">
-                        <label for="lastName" class="form-label">Last name</label>
-                        <input type="text" class="form-control border-primary" id="lastName" placeholder="" value="" required=""/>
-                        <div class="invalid-feedback">
-                            Valid last name is required.
-                        </div>
+                    <div className="col-sm-6">
+                        <label for="lastName" className="form-label">Last name</label>
+                        <input type="text" className="form-control border-primary" id="lastName" placeholder="Last name"/>
                     </div>
 
-                    <div class="col-12">
-                        <label for="username" class="form-label">Username</label>
-                        <div class="input-group has-validation">
-                            <span class="input-group-text border-primary">@</span>
-                            <input type="text" class="form-control border-primary" id="username" placeholder="Username" required=""/>
-                        <div class="invalid-feedback">
-                            Your username is required.
-                            </div>
+                    <div className="col-12">
+
+                        <label for="username" className="form-label">Username <span className="text-muted">(Required)</span></label>
+                        <div className="input-group">
+                            <span className="input-group-text border-primary">@</span>
+                            <input type="text" id="username" className="form-control border-primary" placeholder="Username" required/>
                         </div>
+
                     </div>
 
-                    <div class="col-12">
-                        <label for="email" class="form-label">Email <span class="text-muted">(Required)</span></label>
-                        <input type="email" class="form-control border-primary" id="email" placeholder="you@example.com"/>
-                        <div class="invalid-feedback">
-                            Please enter a valid email address for shipping updates.
-                        </div>
+                    <div className="col-12">
+
+                        <label for="email" className="form-label">Email <span className="text-muted">(Required)</span></label>
+                        <input type="email" className="form-control border-primary" id="email" placeholder="you@example.com" required/>
+
                     </div>
 
-                    <div class="col-12">
-                        <label for="address" class="form-label">Address</label>
-                        <input type="text" class="form-control border-primary" id="address" placeholder="1234 Main St" required=""/>
-                        <div class="invalid-feedback">
-                            Please enter your shipping address.
-                        </div>
+                    <div className="col-12">
+
+                        <label for="address" className="form-label">Address</label>
+                        <input type="text" className="form-control border-primary" id="address" placeholder="1234 Main St"/>
+
                     </div>
 
-                    <div class="col-md-5">
-                        <label for="country" class="form-label">Country</label>
-                        <select class="form-select border-primary" id="country" required="">
+                    <div className="col-md-5">
+
+                        <label for="country" className="form-label">Country</label>
+                        <select className="form-select border-primary" id="country">
                             <option value="">Choose...</option>
                             <option>United States</option>
                             <option>Algeria</option>
                             <option>France</option>
                         </select>
-                        <div class="invalid-feedback">
-                            Please select a valid country.
-                        </div>
+
                     </div>
+
                 </div>
 
-                <hr class="my-4"/>
+                <hr className="my-4"/>
 
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input border-primary" id="save-info"/>
-                    <label class="form-check-label" for="save-info">I have read and accept the privacy policy</label>
+                <div className="form-check">
+                    <input type="checkbox" className="form-check-input border-primary" id="save-info"/>
+                    <label className="form-check-label" for="save-info">I have read and accept the privacy policy</label>
                 </div>
 
-                <hr class="my-4"/>
+                <hr className="my-4"/>
 
-                <button class="w-100 btn btn-primary btn-lg " type="submit">Continue to checkout</button>
+                <button className="w-100 btn btn-primary btn-lg " type="submit">Register</button>
             </form>
         </div>
     )
